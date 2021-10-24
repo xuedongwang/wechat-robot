@@ -1,0 +1,31 @@
+component: http
+name: http-koa-vl4OoEugo
+inputs:
+  src:
+    src: ./
+    exclude:
+      - .env
+  faas:
+    framework: koa
+    name: '${name}'
+    runtime: Nodejs12.16
+    eip: false
+    timeout: 3
+    memorySize: 512
+    tags: []
+    layers:
+      - name: '${output:${stage}:${app}:wechat-robot-layer.name}'
+        version: '${output:${stage}:${app}:wechat-robot-layer.version}'
+  apigw:
+    protocols:
+      - http
+      - https
+    timeout: 60
+    environment: release
+    customDomains: []
+  region: ap-guangzhou
+  isAutoCiDeploy: false
+  static: {}
+org: '1251661402'
+app: wechat-robot
+stage: dev

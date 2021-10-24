@@ -1,0 +1,13 @@
+org: '1251661402'
+app: wechat-robot
+stage: dev
+component: layer
+name: wechat-robot-layer
+inputs:
+  name: wechat-robot-layer
+  region: ap-guangzhou
+  src:
+    src: ../node_modules
+    targetDir: /node_modules
+  runtimes:
+    - Nodejs12.16
