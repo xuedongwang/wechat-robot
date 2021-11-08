@@ -4,13 +4,17 @@
   "description": "",
   "main": "sls.js",
   "scripts": {
-    "dev": "nodemon ./app.js"
+    "dev": "node ./app.js"
   },
   "author": "yugasun",
   "license": "MIT",
   "dependencies": {
     "koa": "^2.11.0",
-    "koa-router": "^8.0.8"
+    "koa-router": "^8.0.8",
+    "node-schedule": "^2.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "wechaty": "^0.62.2",
+    "wechaty-puppet-wechat": "^0.28.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
